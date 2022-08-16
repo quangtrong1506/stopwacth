@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwacth by Quang Trọng</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="Header__stop-wacth">
+                <h1 class="header-text">StopWatch</h1>
+            </div>
+        </header>
+        <div id="clock" class="clock">
+            <div class="clock__count-time"><span id="clock-text" class="clock__text">
+                    <span id="minute">00</span>
+                    <span>:</span>
+                    <span id="second">00</span>
+                    <span>,</span>
+                    <span id="millisecond">00</span>
+                </span>
+            </div>
+
+        </div>
+        <div class="lap" id="lap">
+
+
+        </div>
+        <div class="footer">
+            <div class="all-btn user-select">
+                <div id="start" class="start" style="display:block">
+                    <span onclick="Start_time()">Start</span>
+                </div>
+                <div id="after-start" class="after-start" style="display:none">
+                    <span onclick="Stop()">Stop</span>
+                    <span onclick="Lap()">Lap</span>
+                </div>
+                <div id="after-stop" class="after-stop" style="display:none">
+                    <span onclick="Resume()">resume</span>
+                    <span onclick="Reset()">Reset</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

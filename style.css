@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.main {
+  height: 100vh;
+  width: 500px;
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  width: 500px;
+  height: 10vh;
+  border-bottom: 3px solid #ff9933;
+  position: fixed;
+}
+.header .header-text {
+  text-align: center;
+  line-height: 10vh;
+  margin: 0;
+  text-transform: uppercase;
+}
+.clock {
+  position: fixed;
+  top: 10vh;
+  width: 100%;
+  height: 80vh;
+  left: 0;
+}
+.clock .clock__count-time {
+  font-size: 60px;
+  margin: 0 auto;
+  display: block;
+  width: 90vw;
+}
+.clock .clock__text {
+  min-width: 90vw;
+  vertical-align: -30vh;
+}
+.clock .clock__count-time span {
+  display: inline-block;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 500px;
+  text-align: center;
+  font-size: 6vh;
+  line-height: 10vh;
+}
+
+.footer .all-btn span {
+  cursor: pointer;
+}
+.start span {
+  text-transform: uppercase;
+}
+.after-start,
+.after-stop {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.after-start span {
+  display: inline-block;
+  min-width: 45%;
+  text-align: center;
+  text-transform: uppercase;
+  animation: pullOut linear 0.2s;
+}
+.after-stop span {
+  display: inline-block;
+  min-width: 45%;
+  text-align: center;
+  text-transform: uppercase;
+  animation: change linear 0.2s;
+}
+@keyframes pullOut {
+  from {
+    min-width: 0;
+    opacity: 0;
+  }
+  to {
+    min-width: 45%;
+    opacity: 1;
+  }
+}
+@keyframes change {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.lap {
+  display: none;
+  height: 50vh;
+  min-width: 300px;
+  max-width: 310px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10vh;
+  overflow-y: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.02);
+  animation: pullUp2 linear 0.2s;
+}
+
+.lap__item {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+.result {
+  display: inline-block;
+  margin: 0 auto;
+  width: 300px;
+  height: 8vh;
+  margin-bottom: 2vh;
+  animation: pullUp linear 0.2s;
+}
+@keyframes pullUp {
+  from {
+    height: 1vh;
+  }
+  to {
+    height: 8vh;
+  }
+}
+.result__rank,
+.result__time,
+.result__time-out {
+  display: inline-block;
+  vertical-align: -12px;
+}
+.result__rank {
+  width: 40px;
+  text-align: center;
+  color: #333;
+}
+.result__time {
+  width: 130px;
+  text-align: center;
+}
+.result__time-out {
+  width: 130px;
+  text-align: center;
+  color: red;
+}
+@keyframes pullUp2 {
+  from {
+    height: 40vh;
+  }
+  to {
+    height: 50vh;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+.user-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
